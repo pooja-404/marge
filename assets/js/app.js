@@ -28,7 +28,6 @@ function previewImage(event) {
 }
 
 // attendance
-
 document.addEventListener("DOMContentLoaded", function () {
   const attendanceList = document.getElementById("attendance-list");
   const markPresentButton = document.getElementById("mark-present");
@@ -47,15 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     attendanceList.appendChild(listItem);
   }
 });
-
-// function showComponent() {
-//     var component = document.getElementById('myComponent');
-//     component.style.display = 'block';
-// }
-// function showadd() {
-//     var component = document.getElementById('myadd');
-//     component.style.display = 'block';
-// }
 
 function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
