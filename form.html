@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- mohini -->
+    <div class="mx-auto">
+        <form class="mt-5 w-100 tabcontent" id="Tab3">
+          <div class="formbox mx-sm-5 mx-2 mx-md-auto">
+            <div class="d-md-flex">
+              <div
+                class="d-block d-md-none upload-container mb-3 ms-md-0 "
+              >
+                <div class="photoframe bg-white">
+                  <!-- Placeholder for the uploaded photo -->
+                  <img
+                    id="uploadedImage"
+                    src="#"
+                    class="photoframe w-100"
+                    alt="Uploaded Image"
+                    style="display: none"
+                  />
+                </div>
+  
+                <input
+                  class="upload"
+                  type="file"
+                  onchange="previewImage(event)"
+                />
+              </div>
+              <div
+                class="d-flex align-items-sm-center flex-column"
+              >
+                <div class="formbox2 gap-1 d-sm-flex">
+                  <div class="w-100">
+                    <label for="studentname" class="labeltext"
+                      >StudentName:</label
+                    >
+                    <input
+                      type="text"
+                      name="username"
+                      id="studentname"
+                      class="inputbox"
+                      required
+                    />
+                  </div>
+                  <div class="w-100 pt-3 pt-sm-0">
+                    <label for="Father's Name" class="labeltext"
+                      >Father's Name:</label
+                    >
+                    <input
+                      type="text"
+                      name="username"
+                      id="Father's Name"
+                      class="inputbox"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="formbox2 gap-1 d-sm-flex pt-3">
+                  <div class="w-100">
+                    <label for="studentname" class="labeltext">Contact No.</label>
+                    <input
+                      type="text"
+                      name="username"
+                      id="studentname"
+                      class="inputbox"
+                      required
+                    />
+                  </div>
+                  <div class="w-100 pt-3 pt-sm-0">
+                    <label for="Father's Name" class="labeltext"
+                      >Father's No.</label
+                    >
+                    <input
+                      type="text"
+                      name="username"
+                      id="Father's Name"
+                      class="inputbox"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="d-none d-md-block ">
+                <div class="upload-container ps-4 d-flex justify-content-center">
+                  <div class="photoframe bg-white mx-auto">
+                    <!-- Placeholder for the uploaded photo -->
+  
+                    <img
+                      id="uploadedImage"
+                      src="#"
+                      class="photoframe mx-auto w-100"
+                      alt="Uploaded Image"
+                      style="display: none"
+                    />
+                  </div>
+  
+                  <input
+                    class="upload"
+                    type="file"
+                    onchange="previewImage(event)"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="formcontent pt-3 mx-auto mx-md-0">
+              <label for="email" class="labeltext me-2">Email:</label>
+              <input
+                type="email"
+                name="username"
+                id="email"
+                class="inputbox box-w"
+                required
+              />
+            </div>
+            <div class="formbox2 gap-1 d-sm-flex mx-auto mx-md-0 pt-3">
+              <div class="w-100">
+                <label for="Courses" class="labeltext">Courses</label>
+                <select name="Courses" id="Courses" class="inputbox" required>
+                  <option value="Frontend">Frontend development</option>
+                  <option value="Backend">Backend development</option>
+                  <option value="Full Stack">Full Stack development</option>
+                  <option value="Ethical Hacking">Ethical Hacking</option>
+                  <option value="Cyber Security">Cyber Security</option>
+                  <option value="Graphic Design">Graphic Design</option>
+                  <option value="Digital Marketing">Digital Marketing</option>
+                </select>
+              </div>
+              <div class="w-100 d-flex flex-column pt-3 pt-sm-0">
+                <label for="Batch" class="labeltext">Batch:</label>
+                <input
+                  type="text"
+                  name="Batch"
+                  id="Batch"
+                  class="inputbox"
+                  required
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="submit" class="btn1 flex text-center text-gradient">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

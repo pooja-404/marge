@@ -241,7 +241,6 @@ Style .tab a {
   transition: 0.3s;
 }
 
-
 .tabcontent {
   display: none;
   border-top: none;
@@ -312,6 +311,20 @@ Style .tab a {
   margin-right: auto;
 }
 
+@media (min-width: 768px) {
+  .formbox {
+    width: 650px;
+    padding: 44px 24px;
+  }
+
+  .upload {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .w-200 {
+    width: 200px;
+  }
+}
 
 @media (max-width: 375px) {
   .modal-content {
@@ -345,5 +358,19 @@ Style .tab a {
   .upload {
     width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (max-width: 768.01px) {
+  .dash {
+    display: none;
+  }
+  .links_sideBar svg {
+    width: 20px !important;
+    height: 20px !important ;
+  }
+  .links_sideBar {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 0 !important;
   }
 }

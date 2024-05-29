@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ---attandance-- -->
+      <div class="container px-3 overflow-x-auto tabcontent" id="Tab2">
+        <table>
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Attendance</th>
+              <!-- <th>reasion</th> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>John Smith</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn position-relativee"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div class="modal-content">
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for Half-day"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td ></td> -->
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Jane Doe</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn position-relative"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn2">
+                      <div class="modal-content pos-btn2">
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn2">
+                      <div class="modal-content pos-btn2">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for Half-day"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content pos-btn2">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>Alex Johnson</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn2">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for Half-day"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>Emily Davis</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for Half-day"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>Michael Brown</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for Half-day"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>006</td>
+              <td>Jessica Wilson</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>007</td>
+              <td>Chris Lee</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>008</td>
+              <td>Sarah Martinez</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>009</td>
+              <td>David Anderson</td>
+              <td
+                class="d-flex align-items-center justify-content-center dropbtn"
+              >
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2">
+                          <!-- Presence records will be inserted here -->
+                        </ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog pos-btn">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div
+                        class="modal-content position-absolute card-position"
+                      >
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                          <!-- <button id="submit-reason" class="absent-btn">Submit</button> -->
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+
+              <!-- <td></td> -->
+            </tr>
+            <tr>
+              <td>010</td>
+              <td>Laura Thomas</td>
+              <td class="d-flex align-items-center justify-content-center">
+                <div class="attendance-form">
+                  <button
+                    id="mark-present"
+                    onclick="markPresent()"
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModall"
+                  >
+                    Present
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModall pos-btn1"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog" id="pos-btn1">
+                      <div class="modal-content">
+                        <div class="modal-header pt-2">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Present
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <ul id="attendance-list" class="ps-0 mx-2"></ul>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize reason"
+                          ></textarea>
+                        </div>
+                        <div class="modal-footer py-2">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="head-day px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModale"
+                  >
+                    Half-day
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModale "
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for Half-day"
+                            class="text-capitalize"
+                          ></textarea>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="head-day btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            submit
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <button
+                    type="button"
+                    class="absent-btn px-4 py-2 border-0"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Absent
+                  </button>
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Reason
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close absent-btn"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <textarea
+                          placeholder="Enter reason for absence"
+                          name="message"
+                          class="mx-2 my-2"
+                          id="absent-btn"
+                        ></textarea>
+                        <div id="reason-box">
+                          <textarea
+                            placeholder="Enter reason for absence"
+                            class="text-capitalize"
+                          ></textarea>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="absent-btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- <td></td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
